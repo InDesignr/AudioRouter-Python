@@ -1,10 +1,39 @@
+# Python dependencies for Audio Router
+
+# Audio processing libraries
 cffi==1.17.1
 numpy==2.2.3
-pillow==11.1.0
 PyAudio==0.2.14
 pycparser==2.22
+SoundCard==0.4.3
+sounddevice==0.5.1
+
+# GUI libraries
+Pillow==11.1.0
+PyQt6==6.8.1
+PyQt6-Qt6==6.8.2
+PyQt6_sip==13.10.0
+pystray==0.19.5
+
+# macOS integration libraries
 pyobjc==11.0
 pyobjc-core==11.0
+
+# Required frameworks from pyobjc (core audio related)
+pyobjc-framework-Cocoa==11.0
+pyobjc-framework-CoreAudio==11.0
+pyobjc-framework-CoreAudioKit==11.0
+pyobjc-framework-AudioToolbox==11.0
+pyobjc-framework-AVFoundation==11.0
+
+# Other utilities
+six==1.17.0
+
+# Note: This application requires the SwitchAudioSource command-line tool
+# Install using: brew install switchaudio-osx
+
+# The remaining pyobjc frameworks are included for completeness,
+# but many aren't directly used by this application
 pyobjc-framework-Accessibility==11.0
 pyobjc-framework-Accounts==11.0
 pyobjc-framework-AddressBook==11.0
@@ -18,7 +47,6 @@ pyobjc-framework-AudioVideoBridging==11.0
 pyobjc-framework-AuthenticationServices==11.0
 pyobjc-framework-AutomaticAssessmentConfiguration==11.0
 pyobjc-framework-Automator==11.0
-pyobjc-framework-AVFoundation==11.0
 pyobjc-framework-AVKit==11.0
 pyobjc-framework-AVRouting==11.0
 pyobjc-framework-BackgroundAssets==11.0
@@ -31,13 +59,10 @@ pyobjc-framework-CFNetwork==11.0
 pyobjc-framework-Cinematic==11.0
 pyobjc-framework-ClassKit==11.0
 pyobjc-framework-CloudKit==11.0
-pyobjc-framework-Cocoa==11.0
 pyobjc-framework-Collaboration==11.0
 pyobjc-framework-ColorSync==11.0
 pyobjc-framework-Contacts==11.0
 pyobjc-framework-ContactsUI==11.0
-pyobjc-framework-CoreAudio==11.0
-pyobjc-framework-CoreAudioKit==11.0
 pyobjc-framework-CoreBluetooth==11.0
 pyobjc-framework-CoreData==11.0
 pyobjc-framework-CoreHaptics==11.0
@@ -160,10 +185,3 @@ pyobjc-framework-VideoToolbox==11.0
 pyobjc-framework-Virtualization==11.0
 pyobjc-framework-Vision==11.0
 pyobjc-framework-WebKit==11.0
-PyQt6==6.8.1
-PyQt6-Qt6==6.8.2
-PyQt6_sip==13.10.0
-pystray==0.19.5
-six==1.17.0
-SoundCard==0.4.3
-sounddevice==0.5.1
