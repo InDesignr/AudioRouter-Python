@@ -1,22 +1,20 @@
 #!/bin/bash
 # Launcher script for Audio Router application
-# This script activates the virtual environment and runs the application
 
-# Get the directory where this script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Change to the project directory
-cd "$SCRIPT_DIR"
+# Always use the project directory
+PROJECT_DIR="/Users/madisonhofer/Projects/20250310-Audiorouter-Python"
+cd "$PROJECT_DIR"
 
 # Check if all dependencies are installed
-if [ ! -d "venv" ]; then
-  echo "Virtual environment not found. Creating one..."
-  python3 -m venv venv
-  source venv/bin/activate
+if [ ! -d "venv312" ]; then
+  echo "Python 3.12 virtual environment not found. Creating one..."
+  python3.12 -m venv venv312
+  source venv312/bin/activate
+  pip install --upgrade pip
   pip install -r requirements.txt
 else
   # Activate the virtual environment
-  source venv/bin/activate
+  source venv312/bin/activate
 fi
 
 # Display a notification that the app is starting
